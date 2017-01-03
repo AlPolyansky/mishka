@@ -1,0 +1,21 @@
+.sandwich{
+	width: rem(20px);
+	height: rem(14px);
+	position: absolute;
+	right: rem(20px);
+	top: rem(27px);
+	&__line{
+		background-color: lighten(saturate(adjust-hue($colorBase, 0.0000), 4.6154), 12.7451);
+		width: 100%;
+		display: block;
+		height: rem(2px);
+		margin-bottom: rem(4px);
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+}
+
+.sandwich--active{
+	
+}

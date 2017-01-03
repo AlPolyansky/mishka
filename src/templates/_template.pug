@@ -1,0 +1,27 @@
+block variables
+
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        title= pageTitle
+        meta(content="" name="author")
+        meta(content="" name="description")
+        meta(content="" name="keywords")
+        meta(content="width=device-width, initial-scale=1" name="viewport")
+        meta(content="ie=edge" http-equiv="x-ua-compatible")
+        meta(name="format-detection" content="telephone=no")
+
+        //- favicon block start
+
+        //- favicon block end
+        
+        link(rel='stylesheet' href='./css/foundation.css')
+        link(rel='stylesheet' href='./css/app.css')
+        script(src='./js/foundation.js' defer)
+        script(src='./js/app.js' defer)
+
+    body
+        div(class='wrapper', id=page)
+            block content
+         

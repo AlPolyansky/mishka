@@ -1,0 +1,30 @@
+$border-color: #ececec;
+
+.menu{
+	&__list{
+		margin: 0;
+		padding: 0;
+	}
+	&__item{
+		list-style-type: none;
+		text-align: center;
+		display: block;
+		width: 100%;
+		border-bottom: 1px solid $border-color;
+	}
+	&__link{
+		text-decoration: none;
+		font-family: $fontBase;
+		color: $colorBase;
+		font-weight: 900;
+		display: block;
+		width: 100%;
+		padding: em(19px) 0 em(19px) 0;
+		&:hover{
+			color : rgba($colorBase,.6);
+		}
+		&:active{
+			color : rgba($colorBase,.3);
+		}
+	}
+}

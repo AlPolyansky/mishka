@@ -1,0 +1,24 @@
+$border-color: #ececec;
+
+.logo{
+	height: rem(79px);
+	width: 100%;
+	border-top: 1px solid $border-color;
+	border-bottom: 1px solid $border-color;
+	position: relative;
+	display: block;
+	margin: 0;
+	&__link{
+		display: block;
+		max-width: rem(86px);
+		@include center();
+	}
+	&__img-wrap{
+		display: block;
+	}
+	&__img{
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+}

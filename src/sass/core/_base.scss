@@ -1,0 +1,48 @@
+*,*:after,*:before{
+	box-sizing: border-box;
+}
+
+// colors
+
+$colorLight : #ffffff;
+$colorMain	: #63d1bb;
+$colorBase 	: #000000;
+$colorDark 	: #231f20;
+$colorFooter : #f1f1f1;
+
+
+// fonts
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=cyrillic');
+
+$fontBase : 'Verdana' , 'Tahoma', sans-serif;
+$fontMain : 'Tahoma' , 'Arial', sans-serif;
+$fontExtra : 'Open Sans','Tahoma', sans-serif;
+
+
+// media 
+$desktop 		: 1150px;
+$notebook 	: 768px;
+$tablet 		: 480px;
+
+
+html{
+	font-size: 100%;
+}
+
+body,html{
+	height: 100%;
+}
+
+body{
+	font-family: $fontExtra;
+}
+
+.container{
+	@include container(rem(260px));
+	@include apply-to($tablet){
+		max-width: rem(668px);
+	}
+	@include apply-to($notebook){
+		max-width: rem(1050px);
+	}
+}
