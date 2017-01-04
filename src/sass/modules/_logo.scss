@@ -9,6 +9,13 @@ $border-color: #ececec;
   @include apply-to($tablet){
     max-width: rem(110px);
   }
+  @include apply-to($notebook){
+    max-width: rem(147px);
+    left: 40%;
+    top: 3px;
+    transform: translate(-50%);
+    margin: 0;
+  }
   &__link{
     display: block;
   }

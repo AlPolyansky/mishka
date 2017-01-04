@@ -38,6 +38,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-
+    "picturefill": "^3.0.2"
   }
 }

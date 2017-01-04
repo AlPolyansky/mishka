@@ -104,6 +104,8 @@ var scssLibs = [
 var jsLibs = [
   // Пример:  path.sourse.folder + '/jquery/dist/jquery.js',
   path.sourse.libs + '/jquery/dist/jquery.min.js',
+  'node_modules/svg4everybody/dist/svg4everybody.js',
+  'node_modules/picturefill/dist/picturefill.js'
 ];
 
 

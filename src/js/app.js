@@ -1,6 +1,10 @@
 var commonModule = (function(){
 
 
+  // Плагины
+
+  svg4everybody();
+
   // Переменные
   var menuButton = $('.sandwich');
   var nav = $('.menu');
