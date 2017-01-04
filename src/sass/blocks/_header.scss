@@ -1,3 +1,120 @@
 .header{
-	position: relative;
+  //overflow: hidden;
+  background-color: $colorLight;
+  &__top-line{
+    
+  }
+  &__container{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    max-width: 100%;
+    position: relative;
+  }
+  &__info-container{
+    display: none;
+  }
+  &__logo-wrap{
+    border-top: 1px solid #ececec;
+    border-bottom: 1px solid #ececec;
+    width: 100%;
+  }
+  &__logo{
+    margin: rem(20px) auto rem(22px);
+    @include apply-to($tablet){
+     margin: rem(21px) 0;
+    }
+  }
+  &__sandwich{
+    position: absolute;
+    top: rem(33px);
+    right: rem(29px);
+    @include apply-to($tablet){
+      display: none;
+    }
+  }
+  &__list{
+    @include apply-to($tablet){
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
 }
+
+.header--active{
+  .header__user-menu{
+    display: block;
+  }
+}
+
+
+
+
+@include apply-to($tablet){
+  .header__top-line{
+    background-color: transparent;
+    border-bottom: 1px solid #ececec;
+    margin: 0 auto;
+  }
+  .header__container{
+    max-width: rem(668px);
+  }
+  .header__info-container{
+    display: block;
+    position: relative;
+    max-width: rem(668px);
+  }
+  .header__info{
+    display: block;
+    position: absolute;
+    right: 0;
+    font-size: rem(14px);
+    color: #444444;
+    top: rem(24px);
+    font-weight: 400;
+    letter-spacing: em(0.6px);
+  }
+  .header{
+    &__logo-wrap{
+      order: 1;
+      max-width: rem(317px);
+      background-color: $colorLight;
+      margin-right: auto;
+      border: 0;
+    }
+   
+    &__menu-user{
+      order: 2;
+
+      background-color: $colorLight;
+      position: relative;
+
+    }
+     &__menu{
+      order: 3;
+      position: absolute;
+      left: 0;
+      top: 126%;
+      width: rem(371px);
+      .menu__item{
+        display: inline-block;
+        width: auto;
+        margin-bottom: rem(20px);
+      }
+      .menu__link{
+        display: inline;
+        padding-right: 31px;
+      }
+      .menu__inner{
+        padding: 0;
+        font-size: rem(14px);
+        width: auto;
+      }
+    }
+  }
+}
+
+
+
+

@@ -1,13 +1,18 @@
 $border-color: #ececec;
 
 .menu{
+  display: none;
+  overflow: hidden;
+  width: 100%;
+  @include apply-to($tablet){
+  	display: block;
+  }
 	&__list{
 		margin: 0;
 		padding: 0;
 	}
 	&__item{
 		list-style-type: none;
-		text-align: center;
 		display: block;
 		width: 100%;
 		border-bottom: 1px solid $border-color;
@@ -19,12 +24,95 @@ $border-color: #ececec;
 		font-weight: 900;
 		display: block;
 		width: 100%;
-		padding: em(19px) 0 em(19px) 0;
+		text-align: center;
+		position: relative;
 		&:hover{
 			color : rgba($colorBase,.6);
+	      .menu__ico{
+	        fill: $colorMain;
+	      }
 		}
 		&:active{
-			color : rgba($colorBase,.3);
+		  color : rgba($colorBase,.3);
+        .menu__ico{
+          fill: rgba($colorMain,.3);
+        }
+		}
+	}
+	&__inner{
+		display: inline-block;
+		padding: em(30px) 0 em(30px) 0;
+		width: 320px;
+		text-align: left;
+		padding-left: rem(77px);
+		position: relative;
+	}
+  &__text{
+    //@include center();
+  }
+  &__ico{
+    position: absolute;
+    left: rem(34px);
+  }
+}
+
+.menu--active{
+  display: block;
+}
+
+
+@include apply-to($tablet){
+	.menu--user{
+		width: rem(349px);
+		display: flex;
+		.menu__list{
+			display: flex;
+			width: 100%;
+		}
+		.menu__item{
+			border: none;
+		}
+		.menu__search{
+			max-width: rem(84px);
+			border-right: 1px solid #ececec;
+			border-left: 1px solid #ececec;
+		}
+
+		.menu__search
+		.menu__text{
+			display: none;
+		}
+
+		.menu__search
+		.menu__inner{
+			width: auto;
+			display: block;
+		}
+		.menu__cart{
+			width: 100%;
+		}
+		.menu__cart
+		.menu__inner{
+			padding-left: rem(75px);
+			display: block;
+			width: auto;
+		}
+
+		.menu__cart
+		.menu__ico{
+			left: rem(32px);
+			top: 39%;
+		}
+		.menu__link{
+			padding-top: rem(5px);
+		}
+	}
+
+
+
+	.menu{
+		&__item{
+			border: 0;
 		}
 	}
 }
