@@ -48,7 +48,7 @@
 @include apply-to($tablet){
 	.recalls{
 		padding-top: rem(76px);
-		padding-bottom: rem(174px);
+		padding-bottom: rem(145px);
 		&:before{
 			content: '';
 			display: block;
@@ -81,9 +81,6 @@
 		border: 0;
 		bottom: rem(-28px);
 	}
-	.recalls__control{
-
-	}
 	.recalls__control:first-child{
 		border: 0;
 		left: rem(-5px);
@@ -93,7 +90,7 @@
 @include apply-to($notebook){
 	.recalls{
 		padding-top: 0;
-		padding-bottom: rem(178px);
+		padding-bottom: rem(153px);
 		&:before{
 			display: none;
 		}
@@ -117,5 +114,8 @@
 	}
 	.recalls__button{
 		top: rem(79px);
+	}
+	.recalls__controls{
+		bottom: rem(-1px);
 	}
 }

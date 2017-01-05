@@ -1,12 +1,29 @@
 .contacts{
 	padding-top: rem(39px);
 	padding-bottom: rem(42px);
+	position: relative;
+	&__map-container{
+		max-width: 100%;
+	}
+	&__container{
+		position: relative;
+	}
 	&__title{
 		margin-bottom: rem(25px);
 	}
 	&__button{
 		max-width: rem(260px);
 		margin: 0 auto;
+	}
+	&__ico{
+		position: absolute;
+		top: 0;
+		right: 0;
+		background-image: url("../img/flag.svg");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+		display: none;
 	}
 }
 
@@ -15,7 +32,6 @@
 .contacts{
 	&__table{
 		display: table;
-		//width: 100%;
 	}
 	&__row{
 		display: table-row;
@@ -53,5 +69,88 @@
 			background-color: $colorMain;
 			position: absolute;
 		}
+	}
+}
+
+@include apply-to($tablet){
+	.contacts{
+		padding-top: rem(62px);
+		padding-bottom: rem(56px);
+	}
+	.contacts__map-container{
+		max-width: 100%;
+	}
+	.contacts__title{
+		margin-bottom: rem(50px);
+		position: relative;
+		left: -5px;
+	}
+	.contacts__ico{
+		display: block;
+		top: -15px;
+		right: 4px;
+	}
+	.contacts__row{
+		display: table-cell;
+		width: 50%;
+		&:first-child{
+			padding-right: rem(62px);
+		}
+	}
+	.contacts__table{
+		margin-bottom: rem(24px);
+	}
+	.contacts__table-text{
+		font-size: rem(16px);
+		max-width: 200px;
+	}
+	.contacts__button{
+		max-width: rem(230px);
+	}
+}
+
+@include apply-to($notebook){
+	.contacts{
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+		min-height: rem(457px);
+		padding-top: rem(69px);
+		padding-bottom: rem(155px);
+	}
+	.contacts__ico{
+		right: auto;
+		left: 62px;
+		top: 62px;
+
+	}
+	.contacts__button{
+		position: absolute;
+		width: rem(230px);
+	}
+	.contacts__table{
+		margin-bottom: rem(47px);
+	}
+	.contacts__title{
+		margin-bottom: rem(116px);
+		top: 68px;
+	}
+	.contacts__row{
+		display: table-row;
+		width: 100%;
+		&:first-child{
+			padding-right: 0;
+		}
+	}
+	.contacts__map-container{
+		position: relative;
+		order: -1;
+	}
+	.contacts__map{
+		max-width: rem(525px);
+
+		position: absolute;
+		right: 0;
+		top: 100%;
 	}
 }

@@ -1,6 +1,7 @@
 section.contacts
-	.container.container--small
+	.container.container--small.contacts__container
 		h2.title.title--size-l.contacts__title Контакты
+		.contacts__ico.i-flag
 		.contacts__table
 			.contacts__row
 				.contacts__cell
@@ -14,6 +15,8 @@ section.contacts
 				.contacts__cell
 					.contacts__table-text
 						address.contacts__table-text г. Санкт-Петербург,ул. Большая Конюшенная, д. 19/8, офис 101
-	.map#map
-	.button.contacts__button
-		a(href="#" title='Напишите нам').button__text Напишите нам
+	.container.contacts__map-container
+		.map#map.contacts__map
+	.container.container--small
+		.button.contacts__button
+			a(href="#" title='Напишите нам').button__text Напишите нам

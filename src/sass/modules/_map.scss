@@ -2,4 +2,7 @@
 	height: rem(457px);
 	width: 100%;
 	margin-bottom: rem(37px);
+	@include apply-to($tablet){
+		margin-bottom: rem(55px);
+	}
 }
