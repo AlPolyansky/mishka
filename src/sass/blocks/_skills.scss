@@ -1,8 +1,36 @@
 .skills{
 	padding-top: rem(30px);
 	padding-bottom: rem(20px);
+	@include clear();
 	&__title{
 		margin-bottom: rem(34px);
+	}
+}
+
+@include apply-to($tablet){
+	.skills{
+		padding-top: rem(48px);
+		padding-bottom: rem(24px);
+	}
+	.skills__title{
+		margin-bottom: rem(52px);
+	}
+
+	.skills__wrap{
+		@include col(6);
+	}
+}
+
+@include apply-to($notebook){
+	.skills{
+		padding-top: rem(57px);
+		padding-bottom: rem(30px);
+	}
+	.skills__title{
+		margin-bottom: rem(49px);
+	}
+	.skills__wrap{
+		max-width: rem(350px);
 	}
 }
 
