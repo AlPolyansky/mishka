@@ -1,0 +1,43 @@
+.recalls{
+	padding-top: rem(6px);
+	padding-bottom: rem(51px);
+	position: relative;
+	&__content{
+		width: 100%;
+	}
+	&__title{
+		margin-bottom: em(18px);
+	}
+}
+
+
+
+// arrows slider
+.recalls{
+	&__controls{
+		@include clear();
+		border: 1px solid #ececec;
+		margin-bottom: rem(38px);
+	}
+	&__control{
+		@include col(6);
+		height: rem(52px);
+		position: relative;
+		&:first-child{
+			border-right: 1px solid #ececec;
+		}
+		&:hover{
+			.recalls__control-ico{
+				opacity: .6;
+			}
+		}
+		&:active{
+			.recalls__control-ico{
+				opacity: .3;
+			}
+		}
+	}
+	&__control-ico{
+		@include center();
+	}
+}

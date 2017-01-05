@@ -1,0 +1,26 @@
+.recall{
+	width: 100%;
+	&__text{
+		font-size: rem(14px);
+		line-height: em(34px);
+		margin: 0;
+		padding: 0;
+		margin-bottom: rem(28px);
+		display: block;
+	}
+	&__name{
+		display: block;
+		font-family: $fontBase;
+		font-weight: 900;
+		font-size: rem(14px);
+		margin-bottom: em(17px);
+	}
+	&__email{
+		margin-bottom: em(39px);
+		font-size: rem(14px);
+	}
+}
+
+.flickity-viewport {
+  transition: height 0.2s;
+}

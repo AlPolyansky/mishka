@@ -5,6 +5,7 @@ var commonModule = (function(){
 
   svg4everybody();
 
+
   // Переменные
   var menuButton = $('.sandwich');
   var nav = $('.menu');
@@ -22,6 +23,25 @@ var commonModule = (function(){
     header.toggleClass('header--active')
   };
 
+  var addRecallSlider = function(){
+    var $slider = $('.recalls__content');
+
+    $slider.flickity({
+      pageDots: false,
+      adaptiveHeight: true,
+      prevNextButtons: false,
+    })
+    $('.recalls__control--prev').on( 'click', function(e) {
+      e.preventDefault();
+      $slider.flickity('previous');
+      //$slider.flickity('next');
+    });
+    $('.recalls__control--next').on( 'click', function(e) {
+      e.preventDefault();
+      $slider.flickity('next');
+    });
+  }
+
 
 
   // Прослушка собтий
@@ -33,6 +53,7 @@ var commonModule = (function(){
   return {
       init : function(){
           setUpListener();
+          addRecallSlider();
       }
   }
 
