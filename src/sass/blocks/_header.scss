@@ -1,8 +1,16 @@
 .header{
-  //overflow: hidden;
   background-color: $colorLight;
-  &__top-line{
-    
+  position: relative;
+  &__title{
+    text-align: center;
+    max-width: rem(234px);
+    margin: 0 auto;
+    @include apply-to($tablet){
+     max-width: rem(512px);
+    }
+    @include apply-to($notebook){
+     max-width: rem(700px);
+    }
   }
   &__container{
     display: flex;
@@ -10,6 +18,7 @@
     position: relative;
     max-width: 100%;
     position: relative;
+    @include trans(.3s);
   }
   &__info-container{
     display: none;
@@ -40,6 +49,10 @@
       right: 0;
     }
   }
+  &__wave{
+    background-image: url("../img/wave-light.svg");
+    display: none;
+  }
 }
 
 .header
@@ -57,8 +70,39 @@
 
 
 
+.header__content{
+  padding-top: rem(88px);
+  height: rem(506px);
+  background-image: url("../img/hero-mobile.jpg");
+  background-repeat: no-repeat;
+  //background-size: contain;
+  background-position: center top;
+  background-color: #f9f9f9;
+  position: relative;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 @include apply-to($tablet){
+  .header__wave{
+    display: block;
+    height: rem(24px);
+    bottom: -1px;
+  }
+  .header__content{
+    padding-top: rem(155px);
+    background-image: url("../img/hero-desktop.jpg");
+    height: rem(760px);
+  }
   .header__top-line{
     background-color: transparent;
     border-bottom: 1px solid #ececec;
@@ -71,6 +115,7 @@
     display: block;
     position: relative;
     max-width: rem(668px);
+    z-index: 100;
   }
   .header__info{
     display: block;
@@ -104,6 +149,7 @@
       left: 0;
       top: 126%;
       width: rem(371px);
+      z-index: 100;
       .menu__item{
         display: inline-block;
         width: auto;
@@ -123,9 +169,6 @@
 }
 
 @include apply-to($notebook){
-  .header__container{
-    //padding-bottom: rem(5px);
-  }
 
   .header{
     &__logo-wrap{
@@ -189,6 +232,15 @@
       background-color: #ececec;
       position: absolute;
     }
+  }
+
+  .header__content{
+    padding-top: rem(150px);
+    height: rem(756px);
+  }
+  .header__wave{
+    height: rem(34px);
+    bottom: -5px;
   }
 
 }

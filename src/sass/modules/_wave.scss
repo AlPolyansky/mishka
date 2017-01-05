@@ -1,0 +1,14 @@
+.wave{
+	height: rem(6px);
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	background-image: url("../img/wave.svg");
+	background-repeat: repeat-x;
+	@include apply-to($tablet){
+		height: rem(16px);
+	}
+	@include apply-to($notebook){
+		height: rem(23px);
+	}
+}
