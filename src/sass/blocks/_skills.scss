@@ -1,0 +1,38 @@
+.skills{
+	padding-top: rem(30px);
+	padding-bottom: rem(20px);
+	&__title{
+		margin-bottom: rem(34px);
+	}
+}
+
+
+// ================== FIX ==================
+
+.skills{
+	.i-flower{
+		left: 5px;
+	}
+
+	.i-dollar{
+		top: -5px;
+	}
+
+	.i-heart{
+		left: 7px;
+	}
+
+	.i-thread{
+		left: 4px;
+	}
+	.i-rocket{
+		left: -7px;
+	}
+	.i-present{
+		left: 3px;
+	}
+}
+
+
+
+//-- ================== FIX ==================
