@@ -2,6 +2,7 @@
 	width: 100%;
 	background-color: $colorFooter;
 	padding-top: rem(21px);
+	padding-bottom: rem(11px);
 	.container{
 		@include clear();
 	}

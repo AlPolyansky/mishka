@@ -30,8 +30,12 @@
   }
   &__logo{
     margin: rem(20px) auto rem(22px);
+    transition: opacity .2s;
     @include apply-to($tablet){
      margin: rem(21px) 0;
+    }
+    &:hover{
+      opacity: .3;
     }
   }
   &__sandwich{
@@ -70,15 +74,25 @@
 
 
 
+
 .header__content{
-  padding-top: rem(88px);
-  height: rem(506px);
-  background-image: url("../img/hero-mobile.jpg");
-  background-repeat: no-repeat;
-  //background-size: contain;
-  background-position: center top;
+  padding-top: rem(70px);
   background-color: #f9f9f9;
-  position: relative;
+  height: rem(176px);
+}
+
+
+#home{
+  .header__content{
+    padding-top: rem(88px);
+    height: rem(506px);
+    background-image: url("../img/hero-mobile.jpg");
+    background-repeat: no-repeat;
+    //background-size: contain;
+    background-position: center top;
+    background-color: #f9f9f9;
+    position: relative;
+  }
 }
 
 
@@ -99,10 +113,17 @@
     bottom: -2px;
   }
   .header__content{
-    padding-top: rem(155px);
-    background-image: url("../img/hero-desktop.jpg");
-    height: rem(760px);
+    padding-top: rem(95px);
+    height: rem(237px);
   }
+  #home{
+    .header__content{
+      padding-top: rem(155px);
+      background-image: url("../img/hero-desktop.jpg");
+      height: rem(760px);
+    }
+  }
+  
   .header__top-line{
     background-color: transparent;
     border-bottom: 1px solid #ececec;
@@ -233,10 +254,15 @@
       position: absolute;
     }
   }
-
   .header__content{
-    padding-top: rem(150px);
-    height: rem(756px);
+    padding-top: rem(92px);
+    height: rem(265px);
+  }
+  #home{
+    .header__content{
+      padding-top: rem(150px);
+      height: rem(756px);
+    }
   }
   .header__wave{
     height: rem(34px);
