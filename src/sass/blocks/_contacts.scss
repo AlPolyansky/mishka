@@ -1,0 +1,57 @@
+.contacts{
+	padding-top: rem(39px);
+	padding-bottom: rem(42px);
+	&__title{
+		margin-bottom: rem(25px);
+	}
+	&__button{
+		max-width: rem(260px);
+		margin: 0 auto;
+	}
+}
+
+// table
+
+.contacts{
+	&__table{
+		display: table;
+		//width: 100%;
+	}
+	&__row{
+		display: table-row;
+		width: 100%;
+	}
+	&__cell{
+		display: table-cell;
+		min-width: rem(78px);
+		padding: rem(0px) 0 rem(28px);
+		color: $colorDark2;
+	}
+	&__table-text{
+		font-style: normal;
+		font-size: rem(14px);
+		line-height: rem(32px);
+	}
+	&__email{
+		display: inline-block;
+		text-decoration: none;
+		color: $colorDark2;
+		position: relative;
+		transition: color .2s;
+		&:hover{
+			color: $colorMain;
+		}
+		&:active{
+			opacity: .3;
+		}
+		&:after{
+			content: '';
+			display: block;
+			width: 100%;
+			height: 1px;
+			bottom: 2px;
+			background-color: $colorMain;
+			position: absolute;
+		}
+	}
+}

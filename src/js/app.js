@@ -10,6 +10,7 @@ var commonModule = (function(){
   var menuButton = $('.sandwich');
   var nav = $('.menu');
   var header = $('.header');
+  var sliderTime = 10000;
 
 
 
@@ -30,17 +31,53 @@ var commonModule = (function(){
       pageDots: false,
       adaptiveHeight: true,
       prevNextButtons: false,
+      draggable: false,
+      autoPlay: sliderTime,
+      wrapAround: true,
     })
     $('.recalls__control--prev').on( 'click', function(e) {
       e.preventDefault();
       $slider.flickity('previous');
-      //$slider.flickity('next');
     });
     $('.recalls__control--next').on( 'click', function(e) {
       e.preventDefault();
       $slider.flickity('next');
     });
   }
+
+
+  ymaps.ready(function () {
+    var mapMobile
+    var myMap = new ymaps.Map('map', {
+            center: [59.9387, 30.3233],
+            zoom: 19,
+        }, {
+            searchControlProvider: 'yandex#search'
+        }),
+        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+            hintContent: 'Mishka',
+            balloonContent: 'Мы находимся тут'
+        }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#image',
+            // Своё изображение иконки метки.
+            iconImageHref: '../img/map-pin.svg',
+            // Размеры метки.
+            iconImageSize: [67, 93],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-5, -38]
+        });
+
+    myMap.geoObjects.add(myPlacemark);
+    if(Modernizr.touchevents){
+      myMap.behaviors.disable('multiTouch');
+      myMap.behaviors.disable('drag');
+    };
+});
+
+
 
 
 
