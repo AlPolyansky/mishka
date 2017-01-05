@@ -21,6 +21,29 @@
 	}
 }
 
+
+@include apply-to($tablet){
+	.recall__text{
+		font-size: rem(16px);
+		line-height: em(31px);
+		margin-bottom: rem(11px);
+	}
+	.recall__name{
+		font-size: rem(16px);
+		margin-bottom: em(13px);
+	}
+	.recall__email{
+		font-size: rem(16px);
+	}
+}
+
+@include apply-to($notebook){
+	.recall__text{
+		max-width: rem(700px);
+		margin-bottom: rem(8px);
+	}
+}
+
 .flickity-viewport {
   transition: height 0.2s;
 }
