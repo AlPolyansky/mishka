@@ -1,0 +1,22 @@
+footer.footer
+	.container
+		.footer__part
+			a(href="/" title='Главная').footer__logo
+				+svg('logo-3','i-logo footer__logo-ico')
+		.footer__part
+			.social.footer__social
+				ul.social__list
+					li.social__item
+						a(href='#' title='instagram').social__link
+							+svg('insta','i-insta footer__ico')
+					li.social__item
+						a(href='#' title='facebook').social__link
+							+svg('fb','i-fb footer__ico')
+					li.social__item
+						a(href='#' title='twitter').social__link
+							+svg('twitter','i-twitter footer__ico')
+		.footer__part
+			.copyright
+				a(href='#' title='twitter').copyright__link
+					.copyright__text Разработано
+					+svg('htmlAcademy','i-htmlAcademy copyright__ico')

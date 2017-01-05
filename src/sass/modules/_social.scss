@@ -1,0 +1,35 @@
+.social{
+	display: inline-block;
+	text-align: left;
+	&__list{
+		margin: 0;
+		padding: 0;
+		display: block;
+	}
+	&__item{
+		list-style-type: none;
+		display: inline-block;
+		margin-right: rem(39px);
+		&:nth-child(2){
+			margin-right: rem(31px);
+		}
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+	&__link{
+		display: block;
+		width: rem(20px);
+		height: rem(20px);
+		&:hover{
+			svg{
+				fill: $colorMain;
+			}
+		}
+		&:active{
+			svg{
+				fill: rgba($colorMain,.3);
+			}
+		}
+	}
+}
