@@ -9,6 +9,7 @@ $colorMain	: #63d1bb;
 $colorBase 	: #000000;
 $colorDark 	: #231f20;
 $colorFooter : #f1f1f1;
+$colorDark2 : lighten(saturate(adjust-hue($colorBase, 0.0000), 0.0000), 26.6667);
 
 
 // fonts
@@ -45,6 +46,12 @@ body{
 	}
 	@include apply-to($notebook){
 		max-width: rem(1050px);
+	}
+}
+
+.container--small{
+	@include apply-to($notebook){
+		padding-left: rem(175px)
 	}
 }
 

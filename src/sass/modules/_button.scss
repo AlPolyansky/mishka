@@ -1,0 +1,41 @@
+.button{
+	// variables
+
+	$button-animation: .2s;
+
+	// style
+
+	font-family: $fontExtra;
+	font-weight: 900;
+	text-transform: uppercase;
+	border: 2px solid $colorDark2;
+	text-align: center;
+	transition: background-color $button-animation;
+	&__text{
+		transition: color $button-animation;
+		color: $colorDark2;
+		padding: rem(17px) rem(20px) rem(19px);
+		display: block;
+		text-decoration: none;
+		cursor: pointer;
+	}
+}
+
+.button:hover{
+	background-color: $colorDark2;
+	.button__text{
+		color: $colorLight;
+	}
+}
+
+.button:active{
+	.button__text{
+		opacity: .3;
+	}
+}
+
+@include apply-to($tablet){
+	.button__text{
+		padding: rem(13px) rem(20px) rem(17px);
+	}
+}
