@@ -1,0 +1,17 @@
+section.goods
+	.container
+		ul.goods__list
+			li.goods__item
+				a(href="#" title='Зайчик-попрыгайчик').goods__link
+					.card
+						figure.card__avatar
+							picture.card__img-wrap
+								source(media='(min-width: 1150px)' srcset='./img/photo-1-desktop.jpg')
+								source(media='(min-width: 768px)' srcset='./img/photo-1-tablet.jpg')
+								img.card__img(src='./img/photo-1-mobile.jpg')
+						.card__content
+							h4.card__title Зайчик-попрыгайчик
+							.card__info Рост 30 см, вес 200 г
+							.card__bottom
+								.card__price 1 200 руб.
+								+svg('cart', 'icon i-cart card__ico')

@@ -1,0 +1,88 @@
+.card{
+	width: 100%;
+	padding-bottom: rem(30px);
+	transition: transform .1s;
+	&__avatar{
+		margin: 0;
+		padding: 0;
+	}
+	&__img-wrap{
+		max-height: rem(195px);
+		overflow: hidden;
+	}
+	&__img{
+		max-width: 100%;
+		display: block;
+	}
+	&__content{
+		min-height: 179px;
+		border: 1px solid #ededed;
+		width: 100%;
+		padding: rem(24px) rem(27px) rem(29px) rem(27px);
+		background-color: $colorLight;
+		transition: box-shadow .2s;
+	}
+	&__title{
+		display: block;
+		margin: 0;
+		font-family: $fontBase;
+		font-size: rem(16px);
+		font-weight: 900;
+		margin-bottom: em(9px);
+		line-height: em(25px);
+		transition : opacity .1s;
+	}
+	&__info{
+		font-size: rem(14px);
+		color: $colorDark2;
+		margin-bottom: em(27px);
+		line-height: em(25px);
+	}
+	&__bottom{
+		border-top: 1px solid #ededed;
+		position: relative;
+		padding-top: rem(23px);
+
+	}
+	&__price{
+		font-family: $fontBase;
+		font-size: rem(14px);
+		font-weight: 900;
+		display: block;
+		max-width: 70%;
+		line-height: em(25px);
+		transition : opacity .1s;
+	}
+	&__ico{
+		position: absolute;
+		transition: fill,opacity .1s;
+		right: 0;
+		top: 50%;
+	}
+}
+
+.card:hover{
+	transform: translate(1px,-2px);
+	.card__content{
+		box-shadow: 0px 10px 14px -1px rgba(0,0,0,0.2);
+	}
+	.card__title,
+	.card__price{
+		opacity: .6;
+	}
+	.card__ico{
+		fill: $colorMain;
+	}
+}
+.card:active{
+	transform: none;
+	transition: none;
+	.card__content{
+		box-shadow: 0px 5px 7px -1px rgba(0,0,0,0.1);
+	}
+	.card__title,
+	.card__price,
+	.card__ico{
+		opacity: .3;
+	}
+}

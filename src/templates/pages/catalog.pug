@@ -10,9 +10,9 @@ block content
 					figure.logo.header__logo
 						a.logo__link(href='/' alt='Главная')
 							picture.logo__img-wrap
-							source(media='(min-width: 1150px)' srcset='./img/logo-4.svg')
-							source(media='(min-width: 768px)' srcset='./img/logo-2.svg')
-							img.logo__img(src='./img/logo-1.svg')
+								source(media='(min-width: 1150px)' srcset='./img/logo-4.svg')
+								source(media='(min-width: 768px)' srcset='./img/logo-2.svg')
+								img.logo__img(src='./img/logo-1.svg')
 				.sandwich.header__sandwich
 					.sandwich__line
 					.sandwich__line
@@ -50,4 +50,5 @@ block content
 					.title.title--size-l.header__title Каталог товаров
 		.wave.header__wave
 	.content
+		include ../blocks/_goods
 	include ../blocks/_footer

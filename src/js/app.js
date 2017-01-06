@@ -24,6 +24,19 @@ var commonModule = (function(){
     header.toggleClass('header--active')
   };
 
+  // FIX
+
+  var goodsLinkStop = function(){
+    $('.goods__link').on('click',function(e){
+      e.preventDefault();
+    })
+  }
+
+  goodsLinkStop();
+
+  // FIX
+
+
   var addRecallSlider = function(){
     var $slider = $('.recalls__content');
 
