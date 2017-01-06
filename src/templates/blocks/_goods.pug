@@ -1,4 +1,6 @@
 section.goods
+	//- video.test.video-js.vjs-default-skin(data-setup={"controls":true} width="400" height="300")
+	//- 	source(src='./img/video.mp4' loop="loop" type='video/mp4')
 	.container
 		ul.goods__list
 			li.goods__item
@@ -49,13 +51,15 @@ section.goods
 						+svg('camera','i-camera video-card__svg')
 						h5.video-card__title Процесс производства
 					figure.video-card__avatar
+						//- video.video-card__video
+						//- 	source(src='./img/video.mp4' loop="loop" type='video/mp4')
 						picture.card__img-wrap
 							source(media='(min-width: ' + notebook + ')' srcset='./img/video-desktop.jpg')
 							source(media='(min-width: ' + tablet + ')' srcset='./img/video-tablet.jpg')
-							img.card__img(src='./img/video-mobile.jpg')
+							img.video-card__img(src='./img/video-mobile.jpg')
 						img(src='./img/play.svg' title='Включить видео' alt='Включить видео').video-card__ico.i-play
 					.video-card__content
 						p.video-card__text.
 							По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
-						.button.video-card__button
+						.button.video-card__button#play-button
 							a(href="#" title='Сделать заказ').button__text Сделать заказ

@@ -11,6 +11,8 @@ var commonModule = (function(){
   var nav = $('.menu');
   var header = $('.header');
   var sliderTime = 10000;
+  /*var videoUrl = 'http://www.youtube.com/embed/waEk9w_ldSg';*/
+  var videoUrl = 'https://www.youtube.com/embed/waEk9w_ldSg';
 
 
 
@@ -25,6 +27,8 @@ var commonModule = (function(){
   };
 
   // FIX
+
+ 
 
   var goodsLinkStop = function(){
     $('.goods__link').on('click',function(e){
@@ -90,13 +94,40 @@ var commonModule = (function(){
     };
 });
 
+  //add Bg Video
+  
+
+  // add YouTube video
+  var addYoutubeVideo = function(){
+    $('.video-card__ico').click(function(e){
+      e.preventDefault();
+      $(".video-card__avatar").prepend('<iframe src="'+ videoUrl +'?autoplay=1" frameborder="0" allowfullscreen></iframe>');
+      $(this).hide();
+    })
+  }
 
 
 
 
   // Прослушка собтий
   var setUpListener = function(){
+
     menuButton.on('click',activeSandwich);
+
+    $(".video-card").on({
+      mouseenter: function () {
+          $('.video-card__video')[0].play();
+      },
+      mouseleave: function () {
+        $('.video-card__video')[0].pause();
+      }
+    });
+
+    $(window).on('load',function(){
+      if(!Modernizr.touchevents){
+        $(".video-card__avatar").prepend('<video class="video-card__video"><source src="./img/video.mp4" loop="loop" type="video/mp4"></video>')
+      }
+    })
   };
 
 
@@ -104,6 +135,7 @@ var commonModule = (function(){
       init : function(){
           setUpListener();
           addRecallSlider();
+          addYoutubeVideo();
       }
   }
 

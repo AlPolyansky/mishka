@@ -111,6 +111,7 @@ var jsLibs = [
   'node_modules/svg4everybody/dist/svg4everybody.js',
   'node_modules/picturefill/dist/picturefill.js',
   'node_modules/flickity/dist/flickity.pkgd.min.js',
+  'node_modules/video.js',
 ];
 
 
