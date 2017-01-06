@@ -1,0 +1,135 @@
+.video-card{
+	border: 1px solid #ececec;
+	margin-top: 2px;
+	&__avatar{
+		margin: 0;
+		padding: 0;
+		position: relative;
+		user-select: none;  
+	}
+	&__img-wrap{
+		
+	}
+	&__img{
+		max-width: 100%;
+	}
+	&__ico{
+		@include center();
+		cursor: pointer;
+		transition: .3s;
+		opacity: 1;
+		&:hover{
+			transform: translate(-50%, -50%) scale(1.2);
+		}
+		&:active{
+			opacity: .3;
+			transform: translate(-50%, -50%) scale(.8);
+		}
+	}
+	&__header{
+		position: relative;
+		padding:  rem(0px) rem(42px) rem(1px) rem(90px);
+	}
+	&__title{
+		font-size: rem(16px);
+		font-family: $fontBase;
+		line-height: em(20px);
+	}
+	&__svg{
+		fill: $colorMain;
+		position: absolute;
+		left: rem(33px);
+		top: 10%;
+	}
+	&__content{
+		padding:  rem(30px) rem(18px) rem(33px) rem(33px);
+	}
+	&__text{
+		margin: 0;
+		padding: 0;
+		font-size: rem(14px);
+		line-height: em(27px);
+		margin-bottom: rem(29px);
+	}
+	&__button{
+		max-width: rem(192px);
+	}
+}
+
+@include apply-to($tablet){
+	.video-card{
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.video-card__avatar{
+		order: -1;
+	}
+	.video-card__header{
+		padding: rem(9px) rem(42px) 0 rem(41px);
+		margin-bottom: rem(7px);
+	}
+
+	.video-card__svg{
+		top: 42%;
+		left: rem(41px);
+	}
+
+	.video-card__title{
+		font-size: rem(18px);
+		margin-left: rem(64px);
+	}
+
+	.video-card__content{
+		padding: 0 rem(42px) rem(46px) rem(41px);
+	}
+
+
+	.video-card__text{
+		font-size: rem(16px);
+		margin-bottom: rem(36px);
+	}
+
+	.video-card__button{
+		max-width: 100%;
+	}
+
+}
+
+@include apply-to($notebook){
+	.video-card{
+		position: relative;
+		display: block;
+		width: 100%;
+		@include clear();
+	}
+	.video-card__ico{
+		left: 51%;
+	}
+	.video-card__avatar{
+		max-width: rem(683px);
+		float: left;
+	}
+	.video-card__header{
+		position: absolute;
+		z-index: 100;
+		top: rem(60px);
+		right: rem(107px);
+		
+	}
+	.video-card__svg{
+		left: rem(45px);
+		top: rem(-13px);
+	}
+	.video-card__title{
+		max-width: rem(141px);
+		margin-left: 0;
+	}
+	.video-card__content{
+		padding-top: rem(179px);
+		padding-left: rem(77px);
+		padding-right: rem(57px);
+		width: calc(100% - 683px);
+		float: left;
+	}
+}

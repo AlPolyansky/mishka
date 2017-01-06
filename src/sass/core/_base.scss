@@ -21,8 +21,8 @@ $fontExtra : 'Open Sans','Tahoma', sans-serif;
 
 
 // media 
-$notebook 	: 1150px;
-$tablet 		: 768px;
+/* $notebook 	: 1150px;
+$tablet 		: 768px; */
 
 
 html{
@@ -35,6 +35,11 @@ body,html{
 
 body{
 	font-family: $fontExtra;
+}
+
+::selection{
+	background-color: $colorMain;
+	color: $colorLight;
 }
 
 .container{

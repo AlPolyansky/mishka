@@ -13,12 +13,14 @@ var replace = require('gulp-replace');
 var svgSprite = require('gulp-svg-sprite');
 var sourcemaps = require('gulp-sourcemaps');
 var notify = require('gulp-notify');
+var jsonToSass = require('gulp-json-to-sass');
 //var browserify = require('gulp-browserify');
 // postcss
 var postcss = require('gulp-postcss');
 var cssnext = require('postcss-cssnext');
 var flexbugs = require('postcss-flexbugs-fixes');
 var mqpacker = require("css-mqpacker");
+var config = require('./media.json');
 
 var proccessors = [
   //cssnext(),
@@ -149,7 +151,10 @@ gulp.task('pug', function (callback) {
   if (start == 'front') {
     return gulp.src(pugFolders)
       .pipe(pug(
-        {pretty: true}
+        {
+          pretty: true,
+          locals: config
+        }
       ))
       .on('error', notify.onError(function (error) {
         return {
@@ -167,6 +172,10 @@ gulp.task('pug', function (callback) {
 gulp.task('sass', function () {
   return gulp.src(sassCompile)
     .pipe(sourcemaps.init())
+    .pipe(jsonToSass({
+      jsonPath: 'media.json',
+      scssPath: 'src/sass/core/_var.scss'
+    }))
     .pipe(sass({outputStyle: 'expanded', errLogToConsole: true})).on('error', notify.onError({title: 'Style'}))
     .pipe(autoprefixer(['last 15 versions'], {cascade: true}))
     .pipe(postcss(proccessors))
@@ -291,7 +300,7 @@ gulp.task('server', function () {
 
 // Слежка за папкой с иходниками
 gulp.task('watch', function () {
-  gulp.watch(path.sourse.folder + '/**/*.scss', gulp.series('sass'));
+  gulp.watch([path.sourse.folder + '/**/*.scss','!' + path.sourse.folder + '/**/_var.scss'], gulp.series('sass'));
   if(start == 'front'){
     gulp.watch(path.sourse.pug + '/**/*.pug', gulp.series('pug', 'reload'));
   }

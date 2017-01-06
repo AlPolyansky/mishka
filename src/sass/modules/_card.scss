@@ -2,6 +2,7 @@
 	width: 100%;
 	padding-bottom: rem(30px);
 	transition: transform .1s;
+	@include clear();
 	&__avatar{
 		margin: 0;
 		padding: 0;
@@ -85,4 +86,76 @@
 	.card__ico{
 		opacity: .3;
 	}
+}
+
+
+@include apply-to($tablet){
+	.card__avatar,
+	.card__content{
+		@include col(6);
+	}
+	.card{
+		display: flex;
+	}
+	.card__content{
+		padding-left: rem(27px);
+		padding-right: rem(32px);
+		position: relative;
+		display: flex;
+		flex-direction: column;
+	}
+	.card__bottom{
+		margin-top: auto;
+		padding-top: rem(18px);
+	}
+	.card__price{
+		font-size: rem(16px);
+		position: relative;
+		top: 2px;
+		left: 3px;
+	}
+}
+
+@include apply-to($notebook){
+	.card__avatar,
+	.card__content{
+		@include col(12);
+		float: none;
+	}
+	.card{
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+	}
+	.card__avatar{
+		max-height: rem(462px);
+		overflow: hidden;
+	}
+	.card__content{
+		padding-left: rem(26px);
+		padding-right: rem(59px);
+		padding-bottom: rem(26px);
+		flex-grow: 1;
+	}
+
+	.card__title{
+		font-size: rem(18px);
+		margin-bottom: em(7px);
+		line-height: em(23px);
+	}
+	.card__info{
+		margin-bottom: em(20px);
+		font-size: rem(15px);
+	}
+	.card__bottom{
+		padding-top: rem(21px);
+	}
+	.card__price{
+		left: 0;
+		top: 0;
+	}
+	.card__ico{
+		right: rem(-28px);
+	}
+
 }

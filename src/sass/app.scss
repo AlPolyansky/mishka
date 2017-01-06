@@ -3,7 +3,7 @@
 @import 'libs/orb/_orb.scss';
 
 // core
-
+@import 'core/_var.scss';
 @import 'core/_base.scss';
 
 // modules
@@ -22,6 +22,7 @@
 @import 'modules/_recall.scss';
 @import 'modules/_map.scss';
 @import 'modules/_card.scss';
+@import 'modules/_video-card.scss';
 
 
 // blocks
