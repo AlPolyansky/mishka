@@ -1,0 +1,81 @@
+section.s-form
+	.container
+		p.s-form__text.
+				Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
+		form.s-form__form(method="POST" action="")
+			fieldset.s-form__fieldset
+				h4.s-form__title
+					span.s-form__title-text Тип
+				.s-form__fields-wrap
+					label.radio.s-form__radio
+						input(type='radio' name="type").radio__input
+						.radio__ico
+						span.radio__text Аксессуар для интерьера
+					label.radio.s-form__radio
+						input(type='radio' name="type").radio__input
+						.radio__ico
+						span.radio__text Детская игрушка
+			fieldset.s-form__fieldset
+				h4.s-form__title
+					span.s-form__title-text Цвет
+				.s-form__fields-wrap
+					label.checkbox.s-form__checkbox
+						input(type='checkbox' name="color-white").checkbox__input
+						.checkbox__ico
+						span.checkbox__text Белый
+					label.checkbox.s-form__checkbox
+						input(type='checkbox' name="color-gray").checkbox__input
+						.checkbox__ico
+						span.checkbox__text Серый
+					label.checkbox.s-form__checkbox
+						input(type='checkbox' name="color-tiffany").checkbox__input
+						.checkbox__ico
+						span.checkbox__text «Тиффани»
+					label.checkbox.s-form__checkbox
+						input(type='checkbox' name="color-black").checkbox__input
+						.checkbox__ico
+						span.checkbox__text Черный
+					label.checkbox.s-form__checkbox
+						input(type='checkbox' name="color-pink").checkbox__input
+						.checkbox__ico
+						span.checkbox__text Розовый
+					label.checkbox.s-form__checkbox
+						input(type='checkbox' name="color-orange").checkbox__input
+						.checkbox__ico
+						span.checkbox__text Оранжевый
+			fieldset.s-form__fieldset
+				h4.s-form__title
+					span.s-form__title-text Фио
+				.s-form__fields-wrap
+					.field
+						.field__title Фамилия:
+						input(type="text" placeholder='Укажите фамилию' name='sername').field__input
+					.field
+						.field__title Имя:
+						input(type="text" placeholder='Введите ваше имя' name='name').field__input
+					.field
+						.field__title Отчество:
+						input(type="text" placeholder='Отчество, если желаете' name='fathername').field__input
+			fieldset.s-form__fieldset
+				h4.s-form__title
+					span.s-form__title-text Тел
+				.s-form__fields-wrap
+					.field
+						input(type='text' placeholder='+7 ХХХ ХХ ХХ' name='phone').field__input
+						+svg('phone','i-phone icon field__ico')
+			fieldset.s-form__fieldset
+				h4.s-form__title
+					span.s-form__title-text E-mail
+				.s-form__fields-wrap
+					.field
+						input(type='text' placeholder='Ваш e-mail' name='email').field__input
+						+svg('letter','i-letter icon field__ico')
+			fieldset.s-form__fieldset
+				h4.s-form__title
+					span.s-form__title-text Доп
+				.s-form__fields-wrap
+					.field.field--textarea
+						textarea(placeholder='Опишите все ваши пожелания к заказу' name='extra').field__input
+	.container.container--small
+		.button.s-form__button
+			a(href='#' title='Отправить заказ').button__text Отправить заказ

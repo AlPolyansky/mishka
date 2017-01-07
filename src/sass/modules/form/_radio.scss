@@ -1,0 +1,45 @@
+.radio{
+	display: block;
+	min-height: rem(41px);
+	&__input{
+		display: none;
+	}
+	&__ico{
+		width: rem(40px);
+		height: rem(41px);
+		border-radius: 50%;
+		float: left;
+		background-color: transparent;
+		border: 2px solid $colorDark2;
+		margin-right: 20px;
+		cursor: pointer;
+		position: relative;
+	}
+	&__text{
+		position: relative;
+		top: 5px;
+		vertical-align: middle;
+		cursor: pointer;
+		font-weight: 900;
+		font-size: rem(17px);
+		font-family: $fontBase;
+	}
+}
+
+.radio__ico:after{
+	content: '';
+	display: block;
+	height: rem(17px);
+	width: rem(16px);
+	border-radius: 50%;
+	@include center();
+	opacity: 0;
+	background-color: $colorMain;
+}
+
+
+// active
+.radio__input:checked + .radio__ico:after{
+	opacity: 1;
+}
+

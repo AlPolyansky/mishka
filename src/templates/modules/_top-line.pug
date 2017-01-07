@@ -1,0 +1,41 @@
+.header__top-line
+  .container.header__container
+    .header__logo-wrap
+      figure.logo.header__logo
+        a.logo__link(href='/' title='Главная')
+          picture.logo__img-wrap
+            source(media='(min-width: ' + notebook + ')' srcset='./img/logo-4.svg')
+            source(media='(min-width: ' + tablet + ')' srcset='./img/logo-2.svg')
+            img.logo__img(src='./img/logo-1.svg')
+    .sandwich.header__sandwich
+      .sandwich__line
+      .sandwich__line
+      .sandwich__line
+    nav.menu.header__menu
+      ul.menu__list
+        li.menu__item
+          a.menu__link(href='catalog.html' title='Каталог товаров')
+            span.menu__inner Каталог товаров
+        li.menu__item
+          a.menu__link(href='form.html' title='Вязание на заказ')
+            span.menu__inner Вязание на заказ
+        li.menu__item
+          a.menu__link(href='#' title='Новые поступления')
+            span.menu__inner Новые поступления
+        li.menu__item
+          a.menu__link(href='#' title='Вязание на заказ')
+            span.menu__inner Распродажа
+    nav.menu.menu--user.header__menu-user
+      ul.menu__list
+        li.menu__item.menu__search
+          a.menu__link(href='#' title='Поиск по сайту')
+            span.menu__inner 
+              span.menu__text Поиск по сайту
+              +svg('search','menu__ico icon i-search')
+        li.menu__item.menu__cart
+          a.menu__link(href='#' title='Корзина')
+            span.menu__inner
+              span.menu__text Корзина: пока пуста
+              +svg('cart','menu__ico icon i-cart')
+  .container.header__info-container
+    .header__info Бесплатная доставка по России

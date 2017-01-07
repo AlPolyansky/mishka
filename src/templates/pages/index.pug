@@ -3,7 +3,22 @@ block variables
 	-	pageTitle = 'Главная'
 	- page = 'home'
 block content
-	include ../blocks/_header
+	header.header
+		include ../modules/_top-line
+		.header__content
+			.container
+				.title.title--size-l.header__title Милые штуки ручной работы для дома
+			.controll
+				.container.controll__container
+					a(href='#' title='Предметы интерьера').controll__button
+						span.controll__text Предметы интерьера
+						.controll__ico-wrap
+							+svg('lamp','controll__ico i-lamp')
+					a(href='#' title='Детские игрушки').controll__button
+						span.controll__text Детские игрушки
+						.controll__ico-wrap
+							+svg('lego','controll__ico i-lego')
+		.wave.header__wave
 	.content
 		include ../blocks/_best-product
 		include ../blocks/_skills

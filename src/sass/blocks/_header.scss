@@ -3,7 +3,7 @@
   position: relative;
   &__title{
     text-align: center;
-    max-width: rem(234px);
+    max-width: rem(260px);
     margin: 0 auto;
     @include apply-to($tablet){
      max-width: rem(512px);

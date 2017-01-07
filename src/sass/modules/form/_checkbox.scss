@@ -1,0 +1,33 @@
+.checkbox{
+	display: block;
+	min-height: rem(41px);
+	&__input{
+		display: none;
+	}
+	&__ico{
+		width: rem(40px);
+		height: rem(41px);
+		float: left;
+		background-color: transparent;
+		border: 2px solid $colorDark2;
+		background: no-repeat center/70% transparent;
+		margin-right: 20px;
+		cursor: pointer;
+		position: relative;
+	}
+	&__text{
+		position: relative;
+		top: 8px;
+		vertical-align: middle;
+		cursor: pointer;
+		font-weight: 900;
+		font-size: rem(17px);
+		font-family: $fontBase;
+	}
+}
+
+
+// active
+.checkbox__input:checked + .checkbox__ico{
+	background-image: url("../img/mark-1.svg");
+}
