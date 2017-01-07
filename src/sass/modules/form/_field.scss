@@ -47,3 +47,10 @@
 		right: rem(24px);
 	}
 }
+
+
+@include apply-to($notebook){
+	.field__ico{
+		right: rem(6px);
+	}
+}
