@@ -19,11 +19,25 @@
 		padding: 0 rem(46px) rem(17px) 0;
 		display: block;
 		width: 100%;
+		transition: .2s;
+		&:hover{
+			border-color: $colorMain;
+			+ .field__ico{
+				fill: $colorMain;
+			}
+		}
+		&:active{
+			border-color: rgba($colorBase,.2);
+		}
+		&:focus{
+			border-color: $colorMain;
+		}
 	}
 	&__ico{
 		position: absolute;
 		top: 0;
 		right: 0;
+		transition: .2s
 	}
 }
 
@@ -33,6 +47,16 @@
 	border: 2px solid $colorBase;
 	min-height: rem(149px);
 	padding: rem(17px) rem(50px) rem(17px) rem(17px);
+	transition: .2s;
+	&:hover{
+		border-color: $colorMain;
+	}
+	&:active{
+			border-color: rgba($colorBase,.2);
+		}
+	&:focus{
+			border-color: $colorMain;
+		}
 }
 
 
@@ -53,4 +77,9 @@
 	.field__ico{
 		right: rem(6px);
 	}
+}
+
+
+.filed--error{
+	border-color: #f0b1b1!important;
 }

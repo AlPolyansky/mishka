@@ -4,18 +4,18 @@ section.s-form
 				|Мы будем рады воплотить в жизнь ваши пожелания!
 				br
 				|Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
-	form.s-form__form(method="POST" action="")
+	form.s-form__form(method="POST" action="/")
 		fieldset.s-form__fieldset.s-form__fieldset--radio
 			.container
 				h4.s-form__title
 					span.s-form__title-text Тип
 				.s-form__fields-wrap
 					label.radio.s-form__radio
-						input(type='radio' name="type").radio__input
+						input(type='radio' name="type" data-valid="true" checked="checked").radio__input
 						.radio__ico
 						span.radio__text Аксессуар для интерьера
 					label.radio.s-form__radio
-						input(type='radio' name="type").radio__input
+						input(type='radio' name="type" data-valid="true").radio__input
 						.radio__ico
 						span.radio__text Детская игрушка
 		fieldset.s-form__fieldset.s-form__fieldset--checkbox
@@ -24,27 +24,27 @@ section.s-form
 					span.s-form__title-text Цвет
 				.s-form__fields-wrap
 					label.checkbox.s-form__checkbox
-						input(type='checkbox' name="color-white").checkbox__input
+						input(type='radio' name="color" data-valid="true" checked="checked").checkbox__input
 						.checkbox__ico
 						span.checkbox__text Белый
 					label.checkbox.s-form__checkbox
-						input(type='checkbox' name="color-gray").checkbox__input
+						input(type='radio' name="color" data-valid="true").checkbox__input
 						.checkbox__ico
 						span.checkbox__text Серый
 					label.checkbox.s-form__checkbox
-						input(type='checkbox' name="color-tiffany").checkbox__input
+						input(type='radio' name="color" data-valid="true").checkbox__input
 						.checkbox__ico
 						span.checkbox__text «Тиффани»
 					label.checkbox.s-form__checkbox
-						input(type='checkbox' name="color-black").checkbox__input
+						input(type='radio' name="color" data-valid="true").checkbox__input
 						.checkbox__ico
 						span.checkbox__text Черный
 					label.checkbox.s-form__checkbox
-						input(type='checkbox' name="color-pink").checkbox__input
+						input(type='radio' name="color" data-valid="true").checkbox__input
 						.checkbox__ico
 						span.checkbox__text Розовый
 					label.checkbox.s-form__checkbox
-						input(type='checkbox' name="color-orange").checkbox__input
+						input(type='radio' name="color" data-valid="true").checkbox__input
 						.checkbox__ico
 						span.checkbox__text Оранжевый
 		fieldset.s-form__fieldset.s-form__fieldset--full-name
@@ -54,20 +54,20 @@ section.s-form
 				.s-form__fields-wrap
 					.field
 						.field__title Фамилия:
-						input(type="text" placeholder='Укажите фамилию' name='sername').field__input
+						input(type="text" placeholder='Укажите фамилию' name='sername' data-valid="true").field__input
 					.field
 						.field__title Имя:
-						input(type="text" placeholder='Введите ваше имя' name='name').field__input
+						input(type="text" placeholder='Введите ваше имя' name='name' data-valid="true").field__input
 					.field
 						.field__title Отчество:
-						input(type="text" placeholder='Отчество, если желаете' name='fathername').field__input
+						input(type="text" placeholder='Отчество, если желаете' name='fathername' data-valid="true").field__input
 		fieldset.s-form__fieldset.s-form__fieldset--phone
 			.container
 				h4.s-form__title
 					span.s-form__title-text Тел
 				.s-form__fields-wrap
 					.field
-						input(type='text' placeholder='+7 ХХХ ХХ ХХ' name='phone').field__input
+						input(type='text' placeholder='+7 ХХХ ХХ ХХ' name='phone' data-valid="true").field__input
 						+svg('phone','i-phone icon field__ico')
 		fieldset.s-form__fieldset.s-form__fieldset--email
 			.container
@@ -75,7 +75,7 @@ section.s-form
 					span.s-form__title-text E-mail
 				.s-form__fields-wrap
 					.field
-						input(type='text' placeholder='Ваш e-mail' name='email').field__input
+						input(type='text' placeholder='Ваш e-mail' name='email' data-valid="true").field__input
 						+svg('letter','i-letter icon field__ico')
 		fieldset.s-form__fieldset.s-form__fieldset--textarea
 			.container
@@ -83,9 +83,9 @@ section.s-form
 					span.s-form__title-text Доп
 				.s-form__fields-wrap
 					.field.field--textarea
-						textarea(placeholder='Опишите все ваши пожелания к заказу' name='extra').field__input
-	.container.s-form__info-container
-		.s-form__info Все поля являются обязательными
-	.container.s-form__button-container
-		.button.s-form__button
-			a(href='#' title='Отправить заказ').button__text Отправить заказ
+						textarea(placeholder='Опишите все ваши пожелания к заказу' name='extra' data-valid="true").field__input
+		.container.s-form__info-container
+			.s-form__info Все поля являются обязательными
+		.container.s-form__button-container
+			button(type='submit' title='Отправить заказ').button.s-form__button
+				.button__text Отправить заказ

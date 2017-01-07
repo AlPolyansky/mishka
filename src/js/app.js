@@ -107,6 +107,44 @@ var commonModule = (function(){
   }
 
 
+  // form valid
+
+
+
+  var formValid = function(e){
+    var inputs = $('input,textarea');
+    var thisform = $(this);
+    var flag = true;
+
+    e.preventDefault();
+    if(thisform.attr('data-sumbit') == 'no-submit'){
+      return false;
+    }
+
+    $.each(inputs,function(i){
+      var $this = $(this);
+      if($this.data().valid){
+        if($this.val() == ""){
+          flag = false;
+          thisform.attr('data-sumbit','no-submit');
+          $this.addClass('filed--error');
+
+          setTimeout(function(){
+            $this.removeClass('filed--error');
+            thisform.removeAttr('data-sumbit');
+          },3000);
+          
+        }
+      }
+    })
+
+    if(flag){
+      thisform.unbind('submit').submit();
+    }
+
+  };
+
+
 
 
   // Прослушка собтий
@@ -116,7 +154,7 @@ var commonModule = (function(){
 
     $(".video-card").on({
       mouseenter: function () {
-          $('.video-card__video')[0].play();
+        $('.video-card__video')[0].play();
       },
       mouseleave: function () {
         $('.video-card__video')[0].pause();
@@ -128,6 +166,9 @@ var commonModule = (function(){
         $(".video-card__avatar").prepend('<video class="video-card__video"><source src="./img/video.mp4" loop="loop" type="video/mp4"></video>')
       }
     })
+
+    $('form').on('submit',formValid)
+
   };
 
 

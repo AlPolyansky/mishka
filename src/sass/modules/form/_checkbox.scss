@@ -14,6 +14,13 @@
 		margin-right: rem(20px);
 		cursor: pointer;
 		position: relative;
+		transition: .2s;
+		&:hover{
+			border-color: $colorMain;
+		}
+		&:active{
+			border-color: rgba($colorMain,.3);
+		}
 	}
 	&__text{
 		position: relative;
