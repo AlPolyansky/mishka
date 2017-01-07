@@ -11,13 +11,13 @@
 		background-color: transparent;
 		border: 2px solid $colorDark2;
 		background: no-repeat center/70% transparent;
-		margin-right: 20px;
+		margin-right: rem(20px);
 		cursor: pointer;
 		position: relative;
 	}
 	&__text{
 		position: relative;
-		top: 8px;
+		top: rem(8px);
 		vertical-align: middle;
 		cursor: pointer;
 		font-weight: 900;
@@ -30,4 +30,22 @@
 // active
 .checkbox__input:checked + .checkbox__ico{
 	background-image: url("../img/mark-1.svg");
+	@include apply-to($tablet){
+		background-image: url("../img/mark-2.svg");
+	}
+}
+
+
+@include apply-to($tablet){
+	.checkbox{
+		min-height: rem(52px);
+	}
+	.checkbox__ico{
+		width: rem(54px);
+		height: rem(52px);
+		margin-right: rem(27px);
+	}
+	.checkbox__text{
+		top: rem(14px);
+	}
 }

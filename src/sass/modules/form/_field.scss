@@ -27,11 +27,23 @@
 	}
 }
 
-.field--textarea{
+.field--textarea
+.field__input{
+	resize: none;
+	border: 2px solid $colorBase;
+	min-height: rem(149px);
+	padding: rem(17px) rem(50px) rem(17px) rem(17px);
+}
+
+
+@include apply-to($tablet){
+	
+	.field--textarea
 	.field__input{
-		resize: none;
-		border: 2px solid $colorBase;
-		min-height: rem(149px);
-		padding: rem(17px) rem(50px) rem(17px) rem(17px);
+		min-height: rem(143px);
+	}
+
+	.field__ico{
+		right: rem(24px);
 	}
 }

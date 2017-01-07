@@ -11,13 +11,13 @@
 		float: left;
 		background-color: transparent;
 		border: 2px solid $colorDark2;
-		margin-right: 20px;
+		margin-right: rem(20px);
 		cursor: pointer;
 		position: relative;
 	}
 	&__text{
 		position: relative;
-		top: 5px;
+		top: rem(5px);
 		vertical-align: middle;
 		cursor: pointer;
 		font-weight: 900;
@@ -41,5 +41,23 @@
 // active
 .radio__input:checked + .radio__ico:after{
 	opacity: 1;
+}
+
+@include apply-to($tablet){
+	.radio{
+		min-height: rem(52px);
+	}
+	.radio__ico{
+		width: rem(52px);
+		height: rem(52px);
+		margin-right: rem(29px);
+	}
+	.radio__ico:after{
+		width: rem(21px);
+		height: rem(21px);
+	}
+	.radio__text{
+		top: rem(13px);
+	}
 }
 

@@ -1,9 +1,12 @@
 section.s-form
 	.container
-		p.s-form__text.
-				Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
-		form.s-form__form(method="POST" action="")
-			fieldset.s-form__fieldset
+		p.s-form__text
+				|Мы будем рады воплотить в жизнь ваши пожелания!
+				br
+				|Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
+	form.s-form__form(method="POST" action="")
+		fieldset.s-form__fieldset.s-form__fieldset--radio
+			.container
 				h4.s-form__title
 					span.s-form__title-text Тип
 				.s-form__fields-wrap
@@ -15,7 +18,8 @@ section.s-form
 						input(type='radio' name="type").radio__input
 						.radio__ico
 						span.radio__text Детская игрушка
-			fieldset.s-form__fieldset
+		fieldset.s-form__fieldset.s-form__fieldset--checkbox
+			.container
 				h4.s-form__title
 					span.s-form__title-text Цвет
 				.s-form__fields-wrap
@@ -43,7 +47,8 @@ section.s-form
 						input(type='checkbox' name="color-orange").checkbox__input
 						.checkbox__ico
 						span.checkbox__text Оранжевый
-			fieldset.s-form__fieldset
+		fieldset.s-form__fieldset.s-form__fieldset--full-name
+			.container
 				h4.s-form__title
 					span.s-form__title-text Фио
 				.s-form__fields-wrap
@@ -56,26 +61,31 @@ section.s-form
 					.field
 						.field__title Отчество:
 						input(type="text" placeholder='Отчество, если желаете' name='fathername').field__input
-			fieldset.s-form__fieldset
+		fieldset.s-form__fieldset.s-form__fieldset--phone
+			.container
 				h4.s-form__title
 					span.s-form__title-text Тел
 				.s-form__fields-wrap
 					.field
 						input(type='text' placeholder='+7 ХХХ ХХ ХХ' name='phone').field__input
 						+svg('phone','i-phone icon field__ico')
-			fieldset.s-form__fieldset
+		fieldset.s-form__fieldset.s-form__fieldset--email
+			.container
 				h4.s-form__title
 					span.s-form__title-text E-mail
 				.s-form__fields-wrap
 					.field
 						input(type='text' placeholder='Ваш e-mail' name='email').field__input
 						+svg('letter','i-letter icon field__ico')
-			fieldset.s-form__fieldset
+		fieldset.s-form__fieldset.s-form__fieldset--textarea
+			.container
 				h4.s-form__title
 					span.s-form__title-text Доп
 				.s-form__fields-wrap
 					.field.field--textarea
 						textarea(placeholder='Опишите все ваши пожелания к заказу' name='extra').field__input
-	.container.container--small
+	.container
+		.s-form__info Все поля являются обязательными
+	.container.s-form__button-container
 		.button.s-form__button
 			a(href='#' title='Отправить заказ').button__text Отправить заказ

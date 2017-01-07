@@ -48,12 +48,17 @@
 		&:last-child{
 			margin-bottom: rem(0);
 		}
-
 	}
 	&__button{
 		max-width: rem(260px);
 		padding-top: rem(1px);
 		padding-bottom: rem(1px);
+	}
+	&__info{
+		display: none;
+	}
+	.container{
+		position: relative;
 	}
 }
 
@@ -78,5 +83,145 @@
 		.s-form__title{
 			margin-bottom: rem(32px);
 		}
+	}
+}
+
+
+
+
+
+
+// =======================  width >= 768px =======================
+
+@include apply-to($tablet){
+	.s-form{
+		padding-top: rem(63px);
+		padding-bottom: rem(47px);
+	}
+	.s-form__title:after{
+		display: none;
+	}
+	.s-form__title{
+		font-size: rem(16px);
+		@include col(3);
+	}
+	.s-form__text{
+		font-size: rem(16px);
+	}
+	.s-form__fields-wrap{
+		@include col(9);
+	}
+
+
+
+
+	// секции полей
+	.s-form__fieldset{
+		&:nth-child(2),
+		&:nth-child(4),
+		&:nth-child(5),
+		{
+			background-color: #f1f1f1;
+		}
+	}
+
+	.s-form__fieldset{
+		&:nth-child(1){
+			padding-top: rem(34px);
+			padding-bottom: rem(51px);
+		}
+		&:nth-child(2){
+			padding-top: rem(61px);
+			padding-bottom: rem(62px);
+		}
+		&:nth-child(3){
+			padding-top: rem(65px);
+			padding-bottom: rem(52px);
+			font-size: rem(18px);
+		}
+		&:nth-child(4){
+			padding-top: rem(65px);
+			padding-bottom: rem(34px);
+			font-size: rem(18px);
+		}
+		&:nth-child(5){
+			padding-bottom: rem(61px);
+			font-size: rem(18px);
+		}
+		&:nth-child(6){
+			padding-top: rem(65px);
+			padding-bottom: rem(52px);
+			font-size: rem(18px);
+		}
+	}
+
+
+	// --------------
+
+
+
+
+
+	.s-form__checkbox{
+		@include col(6);
+		&:nth-child(even){
+			padding-left: rem(11px);
+		}
+		&:nth-last-child(1),
+		&:nth-last-child(2)
+		{
+			margin-bottom: 0;
+		}
+	}
+
+	.s-form
+	.field{
+		display: flex;
+	}
+
+	.s-form
+	.field__title{
+		padding-right: rem(24px);
+	}
+
+	.s-form__radio{
+		margin-bottom: rem(24px);
+	}
+
+
+	// title fix 
+
+
+	.s-form__fieldset--radio
+	.s-form__title,
+	.s-form__fieldset--checkbox
+	.s-form__title,
+	.s-form__fieldset--textarea
+	.s-form__title
+	{
+		top: rem(16px);
+	}
+
+
+	// -----------------
+
+
+
+	.s-form__fieldset--full-name
+	.field__input{
+		margin-bottom: rem(14px);
+	}
+
+	.s-form__button{
+		max-width: rem(230px);
+	}
+
+
+
+	.s-form__info{
+		display: block;
+		float: right;
+		position: relative;
+		top: rem(18px);
 	}
 }
